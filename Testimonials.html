@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Church Konnect - Testimonials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Dashbaord.css">
+</head>
+<body class>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">🔥<span>CHURCH</span><br />KONNECT</div>
+      <nav>
+        <ul>
+          <li ><button class="nav-btn ">Dashboard <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Prayer Requests <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Add Church Request <span class="arrow"></span></button></li>
+          <li><button class="nav-btn active">Offerings <span class="arrow">›</span></button></li>
+          <li><button class="nav-btn">Testimonials <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Songs <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Song Books <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Daily Manna <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Events <span class="arrow"></span></button></li>
+        </ul>
+      </nav>
+      
+      
+      
+      <div class="user">
+        <p>John<br /><small>Account Manager</small></p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-semibold">Hello John 👋</h1>
+        <div class="space-x-2">
+          <button class="bg-green-500 text-white px-4 py-2 rounded">Edit Testimonial</button>
+          <button class="bg-blue-500 text-white px-4 py-2 rounded">Add Testimonial</button>
+          <input type="text" placeholder="Search" class="search" />
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-2xl font-bold">5,423</div>
+          <div>Total Requests</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-2xl font-bold">1,893</div>
+          <div>Closed Request</div>
+        </div>
+        <div class="bg-white p-4 rounded shadow text-center">
+          <div class="text-2xl font-bold">189</div>
+          <div>Open Request</div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="bg-white p-6 rounded shadow">
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <h2 class="text-xl font-semibold">Add Testimonials</h2>
+            <a href="#" class="text-sm text-blue-500 hover:underline">Approve/Disapprove Testimonial</a>
+          </div>
+          <div class="flex space-x-2">
+            <input type="text" placeholder="Search" class="border px-2 py-1 rounded" />
+            <select class="border px-2 py-1 rounded">
+              <option>Newest</option>
+              <option>Oldest</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="w-full text-left table-auto mb-4">
+          <thead class="bg-gray-200 text-sm">
+            <tr>
+              <th class="p-2">Requested By</th>
+              <th class="p-2">Testimony</th>
+              <th class="p-2">Contact No</th>
+              <th class="p-2">Other Details</th>
+              <th class="p-2">Place</th>
+              <th class="p-2">Status</th>
+            </tr>
+          </thead>
+          <tbody id="testimonial-body" class="text-sm">
+            <!-- JS will insert rows here -->
+          </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="flex justify-between items-center text-sm text-gray-500">
+          <span>Showing data 1 to 8 of 256K entries</span>
+          <div class="space-x-1">
+            <button class="px-2 py-1 border rounded">&lt;</button>
+            <button class="px-2 py-1 border rounded bg-purple-600 text-white">1</button>
+            <button class="px-2 py-1 border rounded">2</button>
+            <button class="px-2 py-1 border rounded">3</button>
+            <span>...</span>
+            <button class="px-2 py-1 border rounded">40</button>
+            <button class="px-2 py-1 border rounded">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- JS to populate and handle actions -->
+  <script>
+    const testimonials = [
+      { name: "Rajendra Dhanvi", testimony: "Testimony 1", phone: "(225) 555-0118", details: "Established in 2007...", place: "Thane" },
+      { name: "John", testimony: "Testimony 2", phone: "(205) 555-0100", details: "Established in 2007. John sir established it", place: "Vikhroli" },
+      { name: "Raj", testimony: "Testimony 3", phone: "(302) 555-0107", details: "The only church that distributes food to ...", place: "Thane" },
+      { name: "Dhanashree", testimony: "Testimony 4", phone: "(252) 555-0126", details: "Established in 2012...", place: "Kanjur Marg" },
+      { name: "Jerome Bell", testimony: "Testimony 5", phone: "(629) 555-0129", details: "The only church that distributes food to ...", place: "Kurla" },
+      { name: "Kathryn Murphy", testimony: "Testimony 6", phone: "(406) 555-0120", details: "Established in 2012...", place: "Thane" },
+      { name: "Jacob Jones", testimony: "Testimony 7", phone: "(208) 555-0112", details: "The only church that distributes food to ...", place: "Dombivli" },
+      { name: "Kristin Watson", testimony: "Testimony 8", phone: "(704) 555-0127", details: "The only church that distributes food to ...", place: "Ghatkopar" }
+    ];
+
+    const tbody = document.getElementById("testimonial-body");
+
+    testimonials.forEach((t, i) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="p-2">${t.name}</td>
+        <td class="p-2">${t.testimony}</td>
+        <td class="p-2">${t.phone}</td>
+        <td class="p-2">${t.details}</td>
+        <td class="p-2">${t.place}</td>
+        <td class="p-2 space-x-2">
+          <button onclick="approve(${i})" class="bg-green-500 text-white px-2 py-1 rounded text-sm">Approve</button>
+          <button onclick="remove(${i})" class="bg-red-500 text-white px-2 py-1 rounded text-sm">Delete</button>
+        </td>
+      `;
+      tbody.appendChild(row);
+    });
+
+    function approve(index) {
+      alert(`Testimonial "${testimonials[index].testimony}" approved!`);
+    }
+
+    function remove(index) {
+      const row = tbody.children[index];
+      row.remove();
+      alert(`Testimonial "${testimonials[index].testimony}" deleted.`);
+    }
+  </script>
+  <script src="testimonials.js"></script>
+</body>
+</html>

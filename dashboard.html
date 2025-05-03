@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+          <div class="logo">🔥<span>CHURCH</span><br />KONNECT</div>
+          <nav>
+            <ul>
+              <li><button class="nav-btn active">Dashboard <span class="arrow"></span></button></li>
+              <li><button class="nav-btn">Prayer Requests <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn">Add Church Request <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn ">Offerings <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn">Testimonials <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn">Songs <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn">Song Books <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn">Daily Manna <span class="arrow"></span>›</button></li>
+              <li><button class="nav-btn">Events <span class="arrow"></span>›</button></li>
+            </ul>
+          </nav>
+          
+          <div class="user">
+            <p>John<br /><small>Account Manager</small></p>
+          </div>
+        </aside>
+    
+        <main class="content">
+          <header>
+            <h2>Hello John 👋</h2>
+            <button class="add-church-btn">Add Church</button>
+            <input type="text" placeholder="Search" class="search" />
+          </header>
+    
+          <section class="stats-card">
+            <div class="stat">
+              <div class="icon">👤</div>
+              <p>Total Offerings</p>
+              <h3>5,423</h3>
+            </div>
+          </section>
+    
+          <section class="table-section">
+            <div class="table-header">
+              <h3>Offerings</h3>
+              <p class="link">List of Offerings</p>
+              <div class="table-controls">
+                <input type="text" placeholder="Search" />
+                <select>
+                  <option>Newest</option>
+                  <option>Oldest</option>
+                </select>
+              </div>
+            </div>
+    
+            <table>
+              <thead>
+                <tr>
+                  <th>Offerings By</th>
+                  <th>Amount</th>
+                  <th>Payment Mode</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody id="offerings-table-body">
+                <!-- JS will populate rows here -->
+              </tbody>
+            </table>
+    
+            <div class="pagination">
+              <button>&lt;</button>
+              <button class="active">1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <span>...</span>
+              <button>40</button>
+              <button>&gt;</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
