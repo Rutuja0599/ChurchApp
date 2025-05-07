@@ -1,36 +1,36 @@
-const songsData = [
+document.addEventListener("DOMContentLoaded", () => {
+  const songs = [
     {
-      title: 'Mere Prabhu',
-      author: 'Auther 1',
-      language: 'Hindi',
-      duration: '2min 30sec'
+      title: "Mere Prabhu",
+      author: "Author 1",
+      language: "Hindi",
+      duration: "2min 30sec",
     },
     {
-      title: 'Mere Prabhu',
-      author: 'Auther 1',
-      language: 'Hindi',
-      duration: '2min 30sec'
+      title: "Mere Prabhu",
+      author: "Author 1",
+      language: "Hindi",
+      duration: "2min 30sec",
     },
     {
-      title: 'Mere Prabhu',
-      author: 'Auther 1',
-      language: 'Hindi',
-      duration: '2min 30sec'
+      title: "Mere Prabhu",
+      author: "Author 1",
+      language: "Hindi",
+      duration: "2min 30sec",
     },
     {
-      title: 'Mere Prabhu',
-      author: 'Auther 1',
-      language: 'Hindi',
-      duration: '2min 30sec'
-    }
+      title: "Mere Prabhu",
+      author: "Author 1",
+      language: "Hindi",
+      duration: "2min 30sec",
+    },
   ];
-  
-  const tableBody = document.getElementById('songs-table-body');
-  
-  songsData.forEach(song => {
-    const row = document.createElement('tr');
-  
-    row.innerHTML = `
+
+  const tbody = document.getElementById("songsTableBody");
+
+  songs.forEach((song) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
       <td>${song.title}</td>
       <td>${song.author}</td>
       <td>${song.language}</td>
@@ -38,7 +38,9 @@ const songsData = [
       <td><button class="browse-btn">Browse</button></td>
       <td><button class="delete-btn">Delete</button></td>
     `;
-  
-    tableBody.appendChild(row);
+    tbody.appendChild(tr);
   });
-  
+
+  document.getElementById("entry-count").textContent =
+    "Showing data 1 to 8 of 256K entries";
+});

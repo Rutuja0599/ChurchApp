@@ -6,6 +6,7 @@
   <title>Church Konnect - Audio Songs</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="Dashbaord.css" />
+  <link rel="stylesheet" href="AudioSongs.css">
 </head>
 <body>
   
@@ -48,20 +49,22 @@
     
 
 
-      <section class="table-section">
-        <div class="table-header">
-          <h3>Audio Songs</h3>
-          <p class="link">Add/Remove Audio Songs</p>
-          <div class="table-controls">
-            <input type="text" placeholder="Search" />
-            <select>
+      <div class="songs-box">
+        <div class="header-section">
+          <div>
+            <h2>Audio Songs</h2>
+            <a href="#" class="sub-link">Add/Remove Audio Songs</a>
+          </div>
+          <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <select id="sortSelect">
               <option>Newest</option>
               <option>Oldest</option>
             </select>
           </div>
         </div>
-
-        <table>
+    
+        <table class="songs-table">
           <thead>
             <tr>
               <th>Song Title</th>
@@ -72,25 +75,27 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody id="songs-table-body">
-            <!-- JS will populate rows -->
+          <tbody id="songsTableBody">
+            <!-- Content injected by JS -->
           </tbody>
         </table>
-
-        <div class="pagination">
-          <button>&lt;</button>
-          <button class="active">1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <span>...</span>
-          <button>40</button>
-          <button>&gt;</button>
+    
+        <div class="footer">
+          <p id="entry-count">Showing data 1 to 8 of 256K entries</p>
+          <div class="pagination">
+            <button>&lt;</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <span>...</span>
+            <button>40</button>
+            <button>&gt;</button>
+          </div>
         </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    
 
-  <script src="DailyManna.js"></script>
+  <script src="AudioSong.js"></script>
 </body>
 </html>

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prayer_request</title>
+    <title>Offering</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="Dashbaord.css">
+    <link rel="stylesheet" href="offering.css">
 </head>
 <body>
     <div class="container">
@@ -14,14 +15,14 @@
       <nav>
         <ul>
           <li ><button class="nav-btn ">Dashboard <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Prayer Requests <span class="arrow"></span></button></li>
-          <li><button class="nav-btn active">Add Church Request <span class="arrow"></span>›</button></li>
-          <li><button class="nav-btn ">Offerings <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Testimonials <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Songs <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Song Books <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Daily Manna <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Events <span class="arrow"></span></button></li>
+          <li><button class="nav-btn">Prayer Requests <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn ">Add Church Request <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn active ">Offerings <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Testimonials <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Songs <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Song Books <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Daily Manna <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Events <span class="arrow"></span>›</button></li>
         </ul>
       </nav>
       
@@ -46,18 +47,62 @@
       <!-- Stats Cards -->
       <div class="grid grid-cols-3 gap-4 mb-8">
         <div class="bg-white p-4 rounded shadow text-center">
+          <div>Total Offerings</div>
           <div class="text-2xl font-bold">5,423</div>
-          <div>Total Requests</div>
         </div>
-        <div class="bg-white p-4 rounded shadow text-center">
+        <!-- <div class="bg-white p-4 rounded shadow text-center">
           <div class="text-2xl font-bold">1,893</div>
           <div>Closed Request</div>
         </div>
         <div class="bg-white p-4 rounded shadow text-center">
           <div class="text-2xl font-bold">189</div>
           <div>Open Request</div>
-        </div>
+        </div> -->
       </div>
 
+      <div class="offerings-box">
+        <div class="header-section">
+          <div>
+            <h2>Offerings</h2>
+            <a href="#" class="sub-link">List of Offerings</a>
+          </div>
+          <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <select id="sortSelect">
+              <option>Newest</option>
+              <option>Oldest</option>
+            </select>
+          </div>
+        </div>
+    
+        <table class="offerings-table">
+          <thead>
+            <tr>
+              <th>Offerings By</th>
+              <th>Amount</th>
+              <th>Payment Mode</th>
+              <th>Receipt</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Populated via JS -->
+          </tbody>
+        </table>
+    
+        <div class="footer">
+          <p id="entry-count">Showing data 1 to 8 of 256K entries</p>
+          <div class="pagination">
+            <button>&lt;</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <span>...</span>
+            <button>40</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </div>
+      <script src="offering.js"></script>
 </body>
 </html>

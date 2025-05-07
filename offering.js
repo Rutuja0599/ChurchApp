@@ -1,45 +1,25 @@
-const offeringsData = [
-    {
-      name: 'Rajendra Dhanvi',
-      amount: '200rs',
-      mode: 'UPI'
-    },
-    {
-      name: 'Rajendra Dhanvi',
-      amount: '200rs',
-      mode: 'Debit CARD'
-    },
-    {
-      name: 'Rajendra Dhanvi',
-      amount: '200rs',
-      mode: 'Debit CARD'
-    },
-    {
-      name: 'Rajendra Dhanvi',
-      amount: '200rs',
-      mode: 'UPI'
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  const tableData = [
+    { name: "Rajendra Dhanvi", amount: "200rs", mode: "UPI" },
+    { name: "Rajendra Dhanvi", amount: "200rs", mode: "Debit CARD" },
+    { name: "Rajendra Dhanvi", amount: "200rs", mode: "Debit CARD" },
+    { name: "Rajendra Dhanvi", amount: "200rs", mode: "UPI" },
   ];
-  
-  const tableBody = document.getElementById('offerings-table-body');
-  
-  offeringsData.forEach(entry => {
-    const row = document.createElement('tr');
-  
-    row.innerHTML = `
-      <td>${entry.name}</td>
-      <td>${entry.amount}</td>
-      <td>${entry.mode}</td>
+
+  const tbody = document.getElementById("tableBody");
+
+  tableData.forEach((row) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${row.name}</td>
+      <td>${row.amount}</td>
+      <td>${row.mode}</td>
       <td><button class="download-btn">Download Receipt</button></td>
     `;
-  
-    tableBody.appendChild(row);
+    tbody.appendChild(tr);
   });
-  
-  document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
-  
+
+  // Entry count text
+  document.getElementById("entry-count").textContent =
+    "Showing data 1 to 8 of 256K entries";
+});

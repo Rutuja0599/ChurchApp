@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     background: #f9fbff;
@@ -97,7 +97,157 @@ body {
   .table-header .link {
     color: #10b981;
     margin-left: 10px;
+  } */
+  
+  /* ///////////////// */
+
+  .daily-manna-box {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 1100px;
+    margin: auto;
   }
   
-  .table-cont
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .header-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .sub-link {
+    font-size: 14px;
+    color: #12b886;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .sub-link:hover {
+    text-decoration: underline;
+    color: #0ca678;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .controls input,
+  .controls select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .manna-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  
+  .manna-table th,
+  .manna-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .manna-table th {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .edit-btn {
+    background-color: #6ee7b7;
+    color: #065f46;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-right: 6px;
+  }
+  
+  .edit-btn:hover {
+    background-color: #34d399;
+  }
+  
+  .delete-btn {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #fecaca;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .pagination button {
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+  }
+
+
+  .button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.edit, .delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 100px;
+}
+
+.edit {
+  background-color: #ccfbf1;
+  color: #047857;
+}
+
+.delete {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
   

@@ -6,6 +6,7 @@
     <title>prayer_request</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="Dashbaord.css">
+    <link rel="stylesheet" href="song_book.css">
 </head>
 <body>
     <div class="container">
@@ -14,14 +15,14 @@
       <nav>
         <ul>
           <li ><button class="nav-btn ">Dashboard <span class="arrow"></span></button></li>
-          <li><button class="nav-btn ">Prayer Requests <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Add Church Request <span class="arrow"></span></button></li>
-          <li><button class="nav-btn ">Offerings <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Testimonials <span class="arrow"></span></button></li>
-          <li><button class="nav-btn">Songs <span class="arrow"></span></button></li>
-          <li><button class="nav-btn active">Song Books <span class="arrow"></span>›</button></li>
-          <li><button class="nav-btn">Daily Manna <span class="arrow"></span></button></li>
-          <li><button class="nav-btn ">Events <span class="arrow"></span></button></li>
+          <li><button class="nav-btn ">Prayer Requests <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Add Church Request <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn ">Offerings <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Testimonials <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn">Songs <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn active ">Song Books <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn ">Daily Manna <span class="arrow"></span>›</button></li>
+          <li><button class="nav-btn ">Events <span class="arrow"></span>›</button></li>
         </ul>
       </nav>
       
@@ -43,6 +44,54 @@
           <input type="text" placeholder="Search" class="search" />
         </div>
       </div>
+
+      <div class="songbooks-box">
+        <div class="header-section">
+          <div>
+            <h2>Songs Books</h2>
+            <a href="#" class="sub-link">Add/Remove Song Books</a>
+          </div>
+          <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <select id="sortSelect">
+              <option>Newest</option>
+              <option>Oldest</option>
+            </select>
+          </div>
+        </div>
+    
+        <table class="songbooks-table">
+          <thead>
+            <tr>
+              <th>Song Book Title</th>
+              <th>Auther</th>
+              <th>Language</th>
+              <th>Number Characters</th>
+              <th>Replace File</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="songbooksTableBody">
+            <!-- Dynamic rows -->
+          </tbody>
+        </table>
+    
+        <div class="footer">
+          <p id="entry-count">Showing data 1 to 8 of 256K entries</p>
+          <div class="pagination">
+            <button>&lt;</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <span>...</span>
+            <button>40</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+      </div>
+    
+      <script src="song_book.js"></script>
 
     
 </body>
