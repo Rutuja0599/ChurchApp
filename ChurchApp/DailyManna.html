@@ -25,55 +25,50 @@
         <li class="active"><button><i class="fas fa-bible"></i><span>Daily Manna</span></button></li>
         <li ><button><i class="fas fa-calendar-alt"></i><span>Events</span></button></li>
       </ul>
-      <div class="user-info">
-        <img src="JohnManagerLogo.jpeg" class="user-img" />
-        <div class="user-details">
-          <p>John</p>
-          <small>Account Manager</small>
-        </div>
-        <i class="fas fa-chevron-down dropdown-icon"></i>
-      </div>
     </aside>
 
-    <!-- <header class="dashboard-header">
-      <h1>Hello John 👋</h1>
-      <button class="btn add-manna">Add Daily Manna</button>
-      <input type="text" placeholder="Search" class="search-bar" />
-    </header> -->
-
     <!-- Main content -->
-    <main class="main">
-      <header class="dashboard-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+     <main class="main">
+      <header class="dashboard-header">
         <h1>Hello John 👋</h1>
-    
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <button class="btn-add-church">Add Daily Manna</button>
-          <input type="text" placeholder="Search" class="search-bar" />
+        <div class="search-wrapper">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#888"
+            viewBox="0 0 24 24">
+            <path d="M21 21l-4.35-4.35m2.19-5.73a7.5 7.5 0 11-15.001 0 7.5 7.5 0 0115.001 0z" stroke="#888"
+              stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <input type="search" placeholder="      Search" />
+          <span class="notification">🔔</span>
+          <img src="User.png" alt="User" class="user-avatar" />
+          <i class="fas fa-chevron-down dropdown-icon"></i>
         </div>
       </header>
       <br>
       <br>
 
-      <!-- Summary Cards -->
-      <!-- <section class="cards">
-        <div class="card"><i class="fas fa-users icon green"></i><div><p>Total Requests</p><h2>5,423</h2></div></div>
-        <div class="card"><i class="fas fa-user-slash icon orange"></i><div><p>Closed Request</p><h2>1,893</h2></div></div>
-        <div class="card"><i class="fas fa-desktop icon teal"></i><div><p>Open Request</p><h2>189</h2></div></div>
-      </section> -->
-
       <section class="table-section">
         <div class="table-header">
-            <div class="add-church-header">
-                <h1>Daily Manna </h1><br>
-                <a href="#">Approve/Disappove Testimonials</a>
+          <div class="add-church-header">
+            <h1>Daily Manna </h1>
+            <a href="#">Add/Edit/Delete Daily Manna</a>
+          </div>
+
+          <div class="header-controls">
+            <div class="search-wrapper">
+              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                viewBox="0 0 24 24" stroke="#888" stroke-width="2">
+                <path d="M21 21l-4.35-4.35M17.5 10.5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input type="search" placeholder="Search" />
             </div>
-        
-          <div class="controls">
-            <input type="text" placeholder="Search">
-            <select>
-              <option>Newest</option>
-              <option>Oldest</option>
-            </select>
+
+            <div class="sort-container">
+              <label for="sortSelect"><strong>Sort by:</strong></label>
+              <select id="sortSelect">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+              </select>
+            </div>
           </div>
         </div>
         <table>

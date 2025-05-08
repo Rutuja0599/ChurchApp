@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Testimonials</title>
+  <title>Prayer Request</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="AllDashboard.css">
 </head>
@@ -14,39 +14,34 @@
     <aside class="sidebar">
       <div class="logo-section">
         <img src="Church_Connect_Logo.png" alt="Logo" class="logo">
-
       </div>
       <ul class="sidebar-menu">
-        <li><button><i class="fas fa-home"></i><span>Dashboard</span></button></li>
+        <li ><button><i class="fas fa-home"></i><span>Dashboard</span></button></li>
         <li class="active"><button><i class="fas fa-praying-hands"></i><span>Prayer Requests</span></button></li>
         <li><button><i class="fas fa-plus-circle"></i><span>Add Church Request</span></button></li>
         <li><button><i class="fas fa-hand-holding-heart"></i><span>Offerings</span></button></li>
-        <li ><button><i class="fas fa-comment-dots"></i><span>Testimonials</span></button></li>
+        <li><button><i class="fas fa-comment-dots"></i><span>Testimonials</span></button></li>
         <li><button><i class="fas fa-music"></i><span>Songs</span></button></li>
         <li><button><i class="fas fa-book"></i><span>Song Books</span></button></li>
         <li><button><i class="fas fa-bible"></i><span>Daily Manna</span></button></li>
         <li><button><i class="fas fa-calendar-alt"></i><span>Events</span></button></li>
       </ul>
-      <div class="user-info">
-        <img src="JohnManagerLogo.jpeg" class="user-img" />
-        <div class="user-details">
-          <p>John</p>
-          <small>Account Manager</small>
-        </div>
-        <i class="fas fa-chevron-down dropdown-icon"></i>
-      </div>
     </aside>
 
     <!-- Main content -->
     <main class="main">
-      <header class="dashboard-header"
-        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <header class="dashboard-header">
         <h1>Hello John 👋</h1>
-
-        <div style="display: flex; align-items: center; gap: 1rem;">
-          <!-- <button class="btn-add-church">Edit Testimonials</button>
-          <button class="btn-add-church">Add Testimonials</button> -->
-          <input type="text" placeholder="Search" class="search-bar" />
+        <div class="search-wrapper">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#888"
+            viewBox="0 0 24 24">
+            <path d="M21 21l-4.35-4.35m2.19-5.73a7.5 7.5 0 11-15.001 0 7.5 7.5 0 0115.001 0z" stroke="#888"
+              stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <input type="search" placeholder="      Search" />
+          <span class="notification">🔔</span>
+          <img src="User.png" alt="User" class="user-avatar" />
+          <i class="fas fa-chevron-down dropdown-icon"></i>
         </div>
       </header>
 
@@ -76,25 +71,35 @@
       <section class="table-section">
         <div class="table-header">
           <div class="add-church-header">
-            <h1>Prayer Requests </h1>
-            <a href="#">Approve/Disappove Prayer Requests</a>
+            <h1>Prayer Request </h1>
+            <a href="#">Approve/Disapprove Prayer Requests</a>
           </div>
 
-          <div class="controls">
-            <input type="text" placeholder="Search">
-            <select>
-              <option>Newest</option>
-              <option>Oldest</option>
-            </select>
+          <div class="header-controls">
+            <div class="search-wrapper">
+              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                viewBox="0 0 24 24" stroke="#888" stroke-width="2">
+                <path d="M21 21l-4.35-4.35M17.5 10.5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input type="search" placeholder="Search" />
+            </div>
+
+            <div class="sort-container">
+              <label for="sortSelect"><strong>Sort by:</strong></label>
+              <select id="sortSelect">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+              </select>
+            </div>
           </div>
         </div>
         <table>
           <thead>
             <tr>
               <th>User Name</th>
-              <th>Request For</th>
-              <th>Contact Details</th>
-              <th>Prayer Details</th>
+              <th>Gender</th>
+              <th>Phone Number</th>
+              <th>Email</th>
               <th>Place</th>
               <th>Status</th>
             </tr>
@@ -106,7 +111,7 @@
               <td>(225) 555-0118</td>
               <td>Please pray for my uncle</td>
               <td>Kanjur marg</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Ankita</td>
@@ -114,7 +119,7 @@
               <td>(205) 555-0100</td>
               <td>Please pray for my business</td>
               <td>Vashi</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Raj</td>
@@ -122,7 +127,7 @@
               <td>(302) 555-0107</td>
               <td>Please pray for my uncle</td>
               <td>Thane</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Dhanashree</td>
@@ -130,7 +135,7 @@
               <td>(252) 555-0126</td>
               <td>Please pray for my uncle</td>
               <td>Vikhroli</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Jerome Bell</td>
@@ -138,7 +143,7 @@
               <td>(629) 555-0129</td>
               <td>Please pray for my uncle</td>
               <td>Ghansoli</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Kathryn Murphy</td>
@@ -146,7 +151,7 @@
               <td>(406) 555-0120</td>
               <td>Please pray for my business</td>
               <td>Ghatkopar</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Jacob Jones</td>
@@ -154,7 +159,7 @@
               <td>(208) 555-0112</td>
               <td>Please pray for my uncle</td>
               <td>Thane</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
             </tr>
             <tr>
               <td>Kristin Watson</td>
@@ -162,7 +167,7 @@
               <td>(704) 555-0127</td>
               <td>Please pray for my uncle</td>
               <td>Kurla</td>
-              <td><button class="btn green">Approve</button><button class="btn red">Delete</button></td>
+              <td><button class="btn green">Approve</button>  <button class="btn red">Delete</button></td>
               </td>
             </tr>
           </tbody>
@@ -171,20 +176,23 @@
           <span class="pagination-info">Showing data 1 to 8 of 256K entries</span>
           <div class="pagination-pages">
             <span class="page">
-              <span class="page"><</span>
-                <span class="page active">1</span>
-                <span class="page">2</span>
-                <span class="page">3</span>
-                <span class="page">4</span>
-                <span class="page">...</span>
-                <span class="page">40</span>
-                <span class="page">></span>
+              <span class="page">
+                <span class="page">
+                  <span>&lt;</span>
+                    <span class="page active">1</span>
+                    <span class="page">2</span>
+                    <span class="page">3</span>
+                    <span class="page">4</span>
+                    <span class="page">...</span>
+                    <span class="page">40</span>
+                    <span class="page">></span>
           </div>
         </div>
-
       </section>
     </main>
   </div>
 </body>
-
 </html>
+
+/////////
+
